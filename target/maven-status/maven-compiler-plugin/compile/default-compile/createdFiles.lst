@@ -1,0 +1,4 @@
+com\dglazewski\mvcdg\MvcdgApplication.class
+com\dglazewski\mvcdg\service\ProductService.class
+com\dglazewski\mvcdg\model\Product.class
+com\dglazewski\mvcdg\controller\ProductController.class
