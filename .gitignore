@@ -29,10 +29,4 @@ build/
 
 ### VS Code ###
 .vscode/
-/target/generated-sources/
-/target/classes/
-/target/generated-test-sources/
-/target/maven-archiver/
-/target/maven-status/
-/target/surefire-reports/
-/target/test-classes/
+
