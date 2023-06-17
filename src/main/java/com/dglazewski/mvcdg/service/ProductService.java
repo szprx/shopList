@@ -68,8 +68,10 @@ public class ProductService {
         List<Product> list = new ArrayList<>();
         int iterator = 1;
         for (ProductDto productDto : productDtoList) {
-            list.add(new Product(productDto.getName(), productDto.isBought(), iterator));
-            iterator++;
+            if (!(productDto == null || productDto.getName().trim().equals(""))) {
+                list.add(new Product(productDto.getName(), productDto.isBought(), iterator));
+                iterator++;
+            }
         }
         products = new ListProducts(list);
         return true;
