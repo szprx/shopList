@@ -51,6 +51,13 @@ public class ProductController {
         return productService.addProduct(productDto);
     }
 
+    @Operation(summary = "Add all products")
+    @PostMapping("/all")
+    public boolean addProduct(@Parameter(description = "Model of products to be added")
+                              @RequestBody List<ProductDto> productDtoList) {
+        return productService.addProducts(productDtoList);
+    }
+
     @Operation(summary = "Delete product by id")
     @DeleteMapping
     public void deleteProduct(@Parameter(description = "Id of product to be deleted")

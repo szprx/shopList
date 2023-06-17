@@ -6,6 +6,7 @@ import com.dglazewski.mvcdg.model.ProductDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -61,5 +62,16 @@ public class ProductService {
             }
         }
         return null;
+    }
+
+    public boolean addProducts(List<ProductDto> productDtoList) {
+        List<Product> list = new ArrayList<>();
+        int iterator = 1;
+        for (ProductDto productDto : productDtoList) {
+            list.add(new Product(productDto.getName(), productDto.isBought(), iterator));
+            iterator++;
+        }
+        products = new ListProducts(list);
+        return true;
     }
 }
